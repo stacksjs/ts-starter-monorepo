@@ -37,6 +37,6 @@
     "unconfig": "0.3.10"
   },
   "devDependencies": {
-    "better-dx": "^0.1.5"
+    "better-dx": "^0.1.7"
   }
 }
