@@ -28,7 +28,7 @@
       "import": "./dist/*"
     }
   },
-  "module": "./dist/index.js",
+  "module": "./dist/src/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "ts-starter-monorepo": "./dist/bin/cli.js"

@@ -1,4 +1,5 @@
 export interface BinaryConfig {
-  from: string
   verbose: boolean
 }
+
+export type BinaryOptions = Partial<BinaryConfig>
