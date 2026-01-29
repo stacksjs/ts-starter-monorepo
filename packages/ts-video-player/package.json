@@ -2,7 +2,7 @@
   "name": "ts-video-player",
   "version": "0.1.0",
   "description": "A modern, framework-agnostic video player with deep stx integration",
-  "author": "Chris Breuer",
+  "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,6 +17,10 @@
     "./stx": {
       "types": "./dist/stx/index.d.ts",
       "import": "./dist/stx/index.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.js"
     },
     "./providers/*": {
       "types": "./dist/providers/*.d.ts",
@@ -62,7 +66,21 @@
     "vimeo",
     "stx",
     "web-components",
-    "accessibility"
+    "accessibility",
+    "streaming",
+    "captions",
+    "subtitles",
+    "thumbnails",
+    "chapters",
+    "airplay",
+    "chromecast",
+    "analytics",
+    "ads",
+    "vast",
+    "vpaid",
+    "watermark",
+    "i18n",
+    "themes"
   ],
   "repository": {
     "type": "git",
@@ -70,5 +88,6 @@
   },
   "bugs": {
     "url": "https://github.com/stacksjs/ts-video-player/issues"
-  }
+  },
+  "homepage": "https://github.com/stacksjs/ts-video-player#readme"
 }
