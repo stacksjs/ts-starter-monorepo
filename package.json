@@ -1,25 +1,39 @@
 {
-  "name": "ts-starter-monorepo",
+  "name": "ts-video-player",
   "type": "module",
-  "version": "0.0.0",
-  "description": "Like our `ts-starter`, but optimized for monorepos.",
+  "version": "0.1.0",
+  "description": "A modern, framework-agnostic video player with deep stx integration",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
-  "homepage": "https://github.com/stacksjs/ts-starter-monorepo#readme",
+  "homepage": "https://github.com/stacksjs/ts-video-player#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stacksjs/ts-starter-monorepo.git"
+    "url": "git+https://github.com/stacksjs/ts-video-player.git"
   },
   "bugs": {
-    "url": "https://github.com/stacksjs/ts-starter-monorepo/issues"
+    "url": "https://github.com/stacksjs/ts-video-player/issues"
   },
   "keywords": [
-    "monorepo",
-    "ts-starter",
-    "ts-starter-monorepo",
-    "template"
+    "video",
+    "player",
+    "media",
+    "hls",
+    "dash",
+    "youtube",
+    "vimeo",
+    "stx",
+    "web-components",
+    "accessibility",
+    "streaming",
+    "captions",
+    "subtitles",
+    "ads",
+    "vast",
+    "analytics"
   ],
   "scripts": {
+    "build": "bun run --filter '*' build",
+    "dev": "bun run --filter ts-video-player dev",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
     "test": "bun test",
     "lint": "bunx --bun eslint .",
@@ -27,12 +41,12 @@
     "changelog": "bunx logsmith --verbose",
     "changelog:generate": "bunx logsmith --output CHANGELOG.md",
     "release": "bun run changelog:generate && bunx bumpx prompt --recursive",
-    "dev:docs": "bun --bun vitepress dev docs",
-    "build:docs": "bun --bun vitepress build docs",
-    "preview:docs": "bun --bun vitepress preview docs",
+    "dev:docs": "bunx bunpress dev",
+    "build:docs": "bunx bunpress build",
+    "preview:docs": "bunx bunpress preview",
     "typecheck": "bun --bun tsc --noEmit"
   },
   "devDependencies": {
-    "better-dx": "^0.2.3"
+    "better-dx": "^0.2.5"
   }
 }
