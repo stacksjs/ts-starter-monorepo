@@ -16,11 +16,11 @@ This Starter Kit comes pre-configured with the following:
 
 - 🛠️ [Powerful Build Process](https://github.com/oven-sh/bun) - via Bun
 - 💪🏽 [Fully Typed APIs](https://www.typescriptlang.org/) - via TypeScript
-- 📚 [Documentation-ready](https://vitepress.dev/) - via VitePress
-- ⌘ [CLI & Binary](https://www.npmjs.com/package/bunx) - via Bun & CAC
+- 📚 [Documentation-ready](https://bunpress.stacksjs.com/) - via BunPress
+- ⌘ [CLI & Binary](https://www.npmjs.com/package/bunx) - via Bun & Clapp
 - 🧪 [Built With Testing In Mind](https://bun.sh/docs/cli/test) - pre-configured unit-testing powered by [Bun](https://bun.sh/docs/cli/test)
 - 🤖 [Renovate](https://renovatebot.com/) - optimized & automated PR dependency updates
-- 🎨 [ESLint](https://eslint.org/) - for code linting _(and formatting)_
+- 🎨 [Pickier](https://pickier.dev/) - for code linting _(and formatting)_
 - 📦️ [pkg.pr.new](https://pkg.pr.new) - Continuous (Preview) Releases for your libraries
 - 🐙 [GitHub Actions](https://github.com/features/actions) - runs your CI _(fixes code style issues, tags releases & creates its changelogs, runs the test suite, etc.)_
 

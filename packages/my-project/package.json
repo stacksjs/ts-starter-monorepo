@@ -53,8 +53,8 @@
     "zip:windows-x64": "zip -j bin/bin-name-windows-x64.zip bin/bin-name-windows-x64.exe",
     "zip:darwin-x64": "zip -j bin/bin-name-darwin-x64.zip bin/bin-name-darwin-x64",
     "zip:darwin-arm64": "zip -j bin/bin-name-darwin-arm64.zip bin/bin-name-darwin-arm64",
-    "lint": "bunx --bun eslint .",
-    "lint:fix": "bunx --bun eslint . --fix",
+    "lint": "bunx --bun pickier .",
+    "lint:fix": "bunx --bun pickier . --fix",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
     "changelog": "bunx changelogen --output CHANGELOG.md",
     "prepublishOnly": "bun --bun run build && bun run compile:all && bun run zip",
@@ -62,15 +62,6 @@
     "test": "bun test"
   },
   "devDependencies": {
-    "bunfig": "^0.10.1"
-  },
-  "overrides": {
-    "unconfig": "0.3.10"
-  },
-  "lint-staged": {
-    "*.{js,ts}": "bunx --bun eslint . --fix"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+    "bunfig": "^0.15.6"
+  }
 }

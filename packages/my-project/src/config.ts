@@ -5,8 +5,16 @@ export const defaultConfig: BinaryConfig = {
   verbose: true,
 }
 
-// eslint-disable-next-line antfu/no-top-level-await
-export const config: BinaryConfig = await loadConfig({
-  name: 'project',
-  defaultConfig,
-})
+let _config: BinaryConfig | null = null
+
+export async function getConfig(): Promise<BinaryConfig> {
+  if (!_config) {
+    _config = await loadConfig({
+      name: 'project',
+      defaultConfig,
+    })
+  }
+  return _config
+}
+
+export const config: BinaryConfig = defaultConfig
