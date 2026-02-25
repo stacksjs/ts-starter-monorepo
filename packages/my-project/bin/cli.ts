@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { CAC } from 'cac'
 import { version } from '../package.json'
 
