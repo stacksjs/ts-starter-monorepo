@@ -40,7 +40,7 @@ bun run build # builds the library for production-ready use
 bun run release # automates git commits, versioning, and changelog generations
 ```
 
-_Check out the package.json scripts for more commands._
+Check out the package.json scripts for more commands.
 
 ## Testing
 
@@ -91,5 +91,3 @@ Made with 💙
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/ts-starter-monorepo/ci.yml?style=flat-square&branch=main
 [github-actions-href]: https://github.com/stacksjs/ts-starter-monorepo/actions?query=workflow%3Aci
 
-<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/ts-starter-monorepo/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/stacksjs/ts-starter-monorepo -->
