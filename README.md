@@ -90,4 +90,3 @@ Made with 💙
 [npm-version-href]: https://npmjs.com/package/ts-starter-monorepo
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/ts-starter-monorepo/ci.yml?style=flat-square&branch=main
 [github-actions-href]: https://github.com/stacksjs/ts-starter-monorepo/actions?query=workflow%3Aci
-

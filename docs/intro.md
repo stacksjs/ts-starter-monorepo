@@ -88,4 +88,3 @@ The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/ts-start
 Made with 💙
 
 <!-- Badges -->
-
