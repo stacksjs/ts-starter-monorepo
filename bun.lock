@@ -5,8 +5,8 @@
     "": {
       "name": "ts-starter-monorepo",
       "devDependencies": {
-        "@types/bun": "^1.3.9",
-        "better-dx": "^0.2.5",
+        "@types/bun": "^1.3.10",
+        "better-dx": "^0.2.6",
         "typescript": "^5.9.3",
       },
     },
@@ -17,7 +17,7 @@
         "ts-starter-monorepo": "./dist/bin/cli.js",
       },
       "devDependencies": {
-        "bun-plugin-dtsx": "^0.9.12",
+        "bun-plugin-dtsx": "^0.9.13",
         "bunfig": "^0.15.6",
         "cac": "^6.7.14",
       },
