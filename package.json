@@ -1,43 +1,42 @@
 {
-  "name": "ts-starter-monorepo",
+  "name": "ts-charts",
   "type": "module",
   "version": "0.0.0",
-  "description": "Like our `ts-starter`, but optimized for monorepos.",
-  "author": "Chris Breuer <chris@stacksjs.org>",
+  "description": "A complete TypeScript rewrite of D3.js as a Bun-first monorepo.",
+  "author": "Chris Breuer <chris@stacksjs.com>",
   "license": "MIT",
-  "homepage": "https://github.com/stacksjs/ts-starter-monorepo#readme",
+  "homepage": "https://github.com/stacksjs/ts-charts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stacksjs/ts-starter-monorepo.git"
+    "url": "git+https://github.com/stacksjs/ts-charts.git"
   },
   "bugs": {
-    "url": "https://github.com/stacksjs/ts-starter-monorepo/issues"
+    "url": "https://github.com/stacksjs/ts-charts/issues"
   },
   "keywords": [
-    "monorepo",
-    "ts-starter",
-    "ts-starter-monorepo",
-    "template"
+    "d3",
+    "charts",
+    "visualization",
+    "typescript",
+    "bun"
   ],
   "scripts": {
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
-    "test": "bun test",
+    "test": "TZ=America/Los_Angeles bun test",
     "lint": "bunx --bun pickier .",
     "lint:fix": "bunx --bun pickier . --fix",
-    "format": "bunx --bun pickier . --format",
-    "format:fix": "bunx --bun pickier . --format --write",
-    "changelog": "bunx logsmith --verbose",
-    "changelog:generate": "bunx logsmith --output CHANGELOG.md",
-    "release": "bun run changelog:generate && bunx bumpx prompt --recursive",
-    "dev:docs": "bun --bun bunpress dev docs",
-    "build:docs": "bun --bun bunpress build docs",
-    "preview:docs": "bun --bun bunpress preview docs",
+    "changelog": "bunx --bun logsmith --verbose",
+    "changelog:generate": "bunx --bun logsmith --output CHANGELOG.md",
+    "release": "bun run changelog:generate && bunx --bun bumpx prompt --recursive",
+    "dev:docs": "bunx --bun bunpress dev docs",
+    "build:docs": "bunx --bun bunpress build docs",
+    "preview:docs": "bunx --bun bunpress preview docs",
     "typecheck": "bun --bun tsc --noEmit"
   },
   "devDependencies": {
-    "@types/bun": "^1.3.9",
-    "better-dx": "^0.2.5",
-    "typescript": "^5.9.3"
+    "better-dx": "^0.2.7",
+    "bunfig": "^0.15.6",
+    "very-happy-dom": "^0.0.9"
   },
   "workspaces": [
     "packages/*"
