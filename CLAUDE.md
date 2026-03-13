@@ -2,7 +2,7 @@
 
 ## About
 
-A TypeScript starter template optimized for monorepos.
+ts-starter-monorepo is an opinionated TypeScript starter kit for developing Bun packages in a monorepo setup. It comes pre-configured with Bun for building, Pickier for linting/formatting, BunPress for documentation, Clapp for CLI/binary support, built-in testing via Bun's native test runner, pkg.pr.new for continuous preview releases, and GitHub Actions CI for automated tagging, changelogs, and code style enforcement.
 
 ## Linting
 
