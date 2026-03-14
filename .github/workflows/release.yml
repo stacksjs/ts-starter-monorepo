@@ -4,53 +4,36 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   npm:
-    name: npm
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 0
 
-      - name: Install Bun
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-        # env:
-        #   BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        with:
-          bun-version: latest
 
-      - name: Use cached node_modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('**/bun.lock') }}
-          restore-keys: |
-            node-modules-
+      - name: Setup Pantry
+        uses: home-lang/pantry/packages/action@v0.8.15
 
       - name: Install Dependencies
         run: bun install
 
-      - name: Publish to npm
-        run: ./scripts/publish.sh
+      - name: Publish
+        run: pantry publish --npm --access public
         env:
-          BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Create GitHub release
-        run: bunx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Attach Binaries
-        uses: stacksjs/action-releaser@v1.1.0
-        with:
-          files: |
-            packages/ts-starter-monorepo/bin/ts-starter-monorepo-linux-x64.zip
-            packages/ts-starter-monorepo/bin/ts-starter-monorepo-linux-arm64.zip
-            packages/ts-starter-monorepo/bin/ts-starter-monorepo-windows-x64.zip
-            packages/ts-starter-monorepo/bin/ts-starter-monorepo-darwin-x64.zip
-            packages/ts-starter-monorepo/bin/ts-starter-monorepo-darwin-arm64.zip
+      - name: Create GitHub Release
+        uses: stacksjs/action-releaser@v1.2.9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
