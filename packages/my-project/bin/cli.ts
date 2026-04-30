@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { CAC } from 'cac'
+import { CLI as CAC } from '@stacksjs/clapp'
 import { version } from '../package.json'
 
 const cli = new CAC('my-cli')
