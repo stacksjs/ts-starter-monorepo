@@ -4,7 +4,7 @@
 
 > A TypeScript Starter Kit that will help you bootstrap your next project without minimal opinion.
 
-# ts-starter-monorepo
+## ts-starter-monorepo
 
 This is an opinionated TypeScript Starter kit to help kick-start development of your next Bun package.
 
