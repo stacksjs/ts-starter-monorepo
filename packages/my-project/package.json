@@ -1,5 +1,5 @@
 {
-  "name": "ts-starter-monorepo",
+  "name": "my-project",
   "type": "module",
   "version": "0.0.0",
   "description": "Like our `ts-starter`, but optimized for monorepos.",
